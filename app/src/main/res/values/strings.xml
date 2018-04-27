@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DronProjects</string>
+    <string name="Control">Control</string>
+    <string name="Modules">Modules</string>
+    <string name="Battery">Options</string>
+    <string name="Options">Options</string>
+    <string name="Authors">Authors</string>
+</resources>

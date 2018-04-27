@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccca6"
+    android:minHeight="241dp"
+    android:padding="16dp"
+    tools:context="b.big.dronprojects.ControlPanel.ControlPanel">
+
+
+
+
+    <TextView
+        android:id="@+id/batery"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Battery"
+        android:textColor="#FFF"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="60dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@android:color/background_dark"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/custom_progressbar"
+        app:layout_constraintStart_toEndOf="@+id/batery"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/Home"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="1dp"
+            android:background="@drawable/home" />
+
+        <Button
+            android:id="@+id/Camera"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="1dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/camer" />
+
+        <Button
+            android:id="@+id/Settings"
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/sett" />
+    </LinearLayout>
+
+
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/joystickView_left"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginVertical="80dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/joyl"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView_angle_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Angle: 0°"
+        android:textColor="#FFF"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@+id/joystickView_left"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/joystickView_left" />
+
+
+    <TextView
+        android:id="@+id/textView_strength_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Power: 0%"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/joystickView_left"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/joystickView_left" />
+
+
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/joystickView_Right"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginVertical="80dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/joyr"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView_rotationH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="RotateH: 0°"
+        android:textColor="#FFF"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/joystickView_Right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/joystickView_Right"  />
+
+
+    <TextView
+        android:id="@+id/textView_rotationV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        android:text="RotateV: 0°"
+        android:textColor="#FFF"
+        android:textSize="14dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/joystickView_Right"
+        app:layout_constraintTop_toBottomOf="@+id/joystickView_Right" />
+
+</android.support.constraint.ConstraintLayout>
+

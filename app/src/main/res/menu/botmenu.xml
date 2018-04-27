@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/gamepad"
+        android:icon="@drawable/gamepad"
+        android:title="@string/Control"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item android:id="@+id/modules"
+        android:icon="@drawable/wrench"
+        android:title="@string/Modules"
+        app:showAsAction="ifRoom|withText"/>
+
+
+    <item android:id="@+id/settings"
+    android:icon="@drawable/settings"
+    android:title="@string/Options"
+    app:showAsAction="ifRoom|withText" />
+
+    <item android:id="@+id/autors"
+        android:icon="@drawable/authors"
+        android:title="@string/Authors"
+        app:showAsAction="ifRoom|withText" />
+
+
+</menu>

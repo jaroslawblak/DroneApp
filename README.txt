@@ -1,0 +1,3 @@
+siemanko
+gdzie jestem
+alalalalong
