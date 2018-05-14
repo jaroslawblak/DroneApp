@@ -38,7 +38,6 @@ public class SettingsFragment extends Fragment {
 
     View view;
     TextView title;
-    TextView help;
     Context context;
     WifiConnection wifiConnection;
     Button buttonwifi;
@@ -55,15 +54,16 @@ public class SettingsFragment extends Fragment {
             view = inflater.inflate(R.layout.fragment_settings, container, false);
             buttonwifi = view.findViewById(R.id.buttonWifi);
             title= view.findViewById(R.id.connected);
-            help= view.findViewById(R.id.help);
+
             context = getActivity().getApplicationContext();
             wifiConnection = new WifiConnection(context);
+
 
             buttonwifi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 connected= wifiConnection.wifi_connect(view);
-                help.setText(Boolean.toString(connected));
+
                 if(connected){
                     title.setTextColor(ContextCompat.getColor(context, R.color.connected));
                     title.setText("You are connected!");

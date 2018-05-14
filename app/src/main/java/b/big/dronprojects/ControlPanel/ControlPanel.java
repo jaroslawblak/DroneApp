@@ -2,19 +2,26 @@ package b.big.dronprojects.ControlPanel;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
-import b.big.dronprojects.MainActivity;
 import b.big.dronprojects.R;
+import b.big.dronprojects.Wifi.Client;
 import io.github.controlwear.virtual.joystick.android.JoystickView;
 
 public class ControlPanel extends AppCompatActivity {
+
+    public static final String TAG="ControlPanel";
 
     private TextView mTextViewAngleLeft;
     private TextView mTextViewStrengthLeft;
 
     private TextView mTextViewRotationH;
     private TextView mTextViewRotationV;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +38,8 @@ public class ControlPanel extends AppCompatActivity {
             @Override
             public void onMove(int angle, int strength) {
                 mTextViewAngleLeft.setText("Angle: "+angle + "°");
+                (new Thread(new Client(mTextViewAngleLeft.toString()))).start();
+
                 mTextViewStrengthLeft.setText("Power: "+strength + "%");
             }
         });
