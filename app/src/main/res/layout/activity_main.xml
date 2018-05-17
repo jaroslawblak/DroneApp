@@ -32,8 +32,8 @@
         android:layout_height="56dp"
         android:layout_gravity="bottom"
         android:background="@drawable/border"
-        app:itemIconTint="@color/addcolor"
-        app:itemTextColor="@color/addcolor"
+        app:itemIconTint="#c3c3c3"
+        app:itemTextColor="#c3c3c3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/botmenu" />
 
